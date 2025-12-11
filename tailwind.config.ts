@@ -9,19 +9,45 @@ const config: Config = {
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
       },
       colors: {
-        ink: "#0b1520",
-        mist: "#e2e8f0",
-        gold: "#d6a400",
-        teal: "#0ea5e9",
-        sand: "#f5f1e8"
+        // Premium Dark Theme Palette
+        obsidian: "#050505", // Deepest background
+        charcoal: "#0a0a0a", // Slightly lighter background
+        navy: "#0f172a", // Rich accent background
+        
+        // Accents
+        gold: "#FFD700",
+        "gold-dim": "#C5A000",
+        teal: "#00E5FF",
+        "teal-dim": "#00B8CC",
+        
+        // Text
+        mist: "#94a3b8", // Subtext
+        ink: "#f8fafc", // Main text (inverted for dark mode)
       },
       boxShadow: {
-        card: "0 16px 40px rgba(12, 20, 31, 0.12)",
-        glow: "0 0 0 1px rgba(14, 165, 233, 0.25), 0 18px 60px rgba(14, 165, 233, 0.25)"
+        card: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+        glow: "0 0 20px rgba(0, 229, 255, 0.15)",
+        "glow-gold": "0 0 20px rgba(255, 215, 0, 0.15)"
       },
       backgroundImage: {
-        "grain": "radial-gradient(circle at 20% 20%, rgba(14,165,233,0.08), transparent 30%), radial-gradient(circle at 80% 0%, rgba(214,164,0,0.08), transparent 30%)"
-      }
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "hero-glow": "conic-gradient(from 180deg at 50% 50%, #0f172a 0deg, #050505 180deg, #0f172a 360deg)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s ease-out forwards",
+        "slide-up": "slideUp 0.5s ease-out forwards",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
     }
   },
   plugins: []
